@@ -174,8 +174,8 @@ def plot_odds_data(game_info, game_odds, start_time, away_max_dt, home_max_dt):
             
     # ---- Plot ----
     plt.figure(figsize=(10, 5))
-    plt.plot(game_odds['DateTime'], game_odds['HomeOdds'], label='Home Odds', marker='o')
-    plt.plot(game_odds['DateTime'], game_odds['AwayOdds'], label='Away Odds', marker='o')
+    plt.plot(game_odds['DateTime'], game_odds['HomeOdds'], label=f'{home_team}', marker='o')
+    plt.plot(game_odds['DateTime'], game_odds['AwayOdds'], label=f'{away_team}', marker='o')
     plt.xlabel('Time')
     plt.ylabel('Odds')
     plt.title(f'{away_team} @ {home_team}')
@@ -202,6 +202,7 @@ def plot_odds_data(game_info, game_odds, start_time, away_max_dt, home_max_dt):
 
     # Ensure layout is tight
     plt.tight_layout()
+    plt.savefig("nba_odds_plot.png", format='png')
     plt.show()
 
 
