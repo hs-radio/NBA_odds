@@ -184,8 +184,8 @@ def plot_odds_data(game_info, game_odds, start_time, away_max_dt, home_max_dt):
     plt.axvline(x=start_time, color='k', linestyle='-', label='Game Start')
     
     # Plot vertical lines for maximum Away and Home odds times
-    plt.axvline(x=away_max_dt, color='r', linestyle='--', label='Max away odds')
-    plt.axvline(x=home_max_dt, color='r', linestyle='-.', label='Max home odds')
+    plt.axvline(x=away_max_dt, color='r', linestyle='--', label=f'best odds: {away_team}')
+    plt.axvline(x=home_max_dt, color='r', linestyle='-.', label=f'best odds: {home_team}')
 
     # Add legend for the vertical lines
     plt.legend()
